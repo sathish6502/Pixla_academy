@@ -53,7 +53,7 @@ const HeroSection = () => {
       <div className="relative z-20 flex flex-col items-center text-center text-white px-6 md:px-20 pt-[210px] pb-[120px] ">
         {/* 👆 Increase/decrease pt / pb to adjust top & bottom spacing */}
 
-        <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight max-w-3xl mb-6 drop-shadow-md">
+        <h1 className="text-4xl sm:text-4xl md:text-4xl font-semibold leading-tight max-w-3xl mb-6 drop-shadow-md">
           {slides[current].title}
         </h1>
 
