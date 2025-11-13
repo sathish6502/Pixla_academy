@@ -31,8 +31,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden px-6 md:px-20 py-20 ">
-      {/* ----- Slides ----- */}
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -40,48 +40,44 @@ const HeroSection = () => {
             index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          {/* Background Image */}
           <img
             src={slide.image}
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
-
-          {/* Overlay */}
           <div className="absolute inset-0 bg-black/50"></div>
-
-          {/* ----- Content ----- */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 md:px-20 py-6">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight max-w-5xl drop-shadow-md">
-              {slide.title}
-            </h1>
-
-            <p className="mt-6 text-lg sm:text-xl md:text-2xl font-light max-w-3xl opacity-90">
-              {slide.subtitle}
-            </p>
-
-            <button className="mt-8 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300">
-              Explore Program <ArrowRight size={20} />
-            </button>
-
-            {/* Stats Section */}
-            <div className="flex flex-wrap justify-center gap-4 mt-12">
-              {["500+ Students", "100+ Internships", "5 Campuses"].map(
-                (stat, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/90 backdrop-blur-md text-black px-6 py-2 rounded-full text-base md:text-lg font-semibold shadow-sm"
-                  >
-                    {stat}
-                  </div>
-                )
-              )}
-            </div>
-          </div>
         </div>
       ))}
 
-      {/* ----- Dots Indicator ----- */}
+      {/* ✅ Content — control top/bottom space manually */}
+      <div className="relative z-20 flex flex-col items-center text-center text-white px-6 md:px-20 pt-[180px] pb-[120px] ">
+        {/* 👆 Increase/decrease pt / pb to adjust top & bottom spacing */}
+
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-5xl mb-6 drop-shadow-md">
+          {slides[current].title}
+        </h1>
+
+        <p className="text-lg sm:text-xl md:text-2xl font-light max-w-3xl opacity-90 mb-10">
+          {slides[current].subtitle}
+        </p>
+
+        <button className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300 mb-10">
+          Explore Program <ArrowRight size={20} />
+        </button>
+
+        <div className="flex flex-wrap justify-center gap-4 ">
+          {["500+ Students", "100+ Internships", "5 Campuses"].map((stat, i) => (
+            <div
+              key={i}
+              className="bg-white/90 backdrop-blur-md text-black px-6 py-2 rounded-full text-base md:text-lg font-semibold shadow-sm"
+            >
+              {stat}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
         {slides.map((_, index) => (
           <button

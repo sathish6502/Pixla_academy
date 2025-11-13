@@ -4,7 +4,7 @@ import Logo from "./../../assets/Header/Header.png"; // your logo image
 
 const Header = () => {
   return (
-    <header className="absolute top-4 md:top-10 left-0 w-full z-20 px-6 md:px-20">
+    <header className="absolute top-4 md:top-10 left-0 w-full z-20 px-6 md:px-20 ">
       <div className="flex  justify-between items-center text-white w-full">
         
         {/* 🔹 Logo Section */}
