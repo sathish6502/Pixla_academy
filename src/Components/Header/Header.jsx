@@ -6,8 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-4 md:top-10 left-0 w-full z-20 px-6 md:px-20">
-      <div className="flex justify-between items-center text-white w-full">
+    <header className="absolute top-4 md:top-10 left-0 w-full z-20 px-6 md:px-20 ">
+      <div className="flex  justify-between items-center text-white w-full">
+        
         {/* 🔹 Logo Section */}
         <div className="flex items-center">
           <img src={Logo} alt="Pixla Academy" className="h-10 md:h-12 w-auto" />
