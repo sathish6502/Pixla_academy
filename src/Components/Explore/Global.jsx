@@ -8,46 +8,49 @@ import handshake from "./../../assets/About/handshake.jpg";
 const AboutPixla = () => {
   return (
     <section className="bg-white px-20 py-20">
-      {/* Header */}
-      <p className="text-sm font-medium text-gray-700 mb-2">
-        About Pixla Academy
-      </p>
-      <h2 className="text-4xl font-bold leading-snug mb-10">
-        A Global University <br /> for the Next Generation
-      </h2>
+      {/* Two Column Grid: Left (Heading + Images) | Right (Content) */}
+      <div className="grid grid-cols-2 gap-12 items-start mb-20">
+        {/* LEFT SIDE */}
+        <div>
+          {/* Heading */}
+          <p className="text-sm font-medium text-gray-700 mb-2">
+            About Pixla Academy
+          </p>
+          <h2 className="text-4xl font-bold leading-snug mb-10">
+            A Global University <br /> for the Next Generation
+          </h2>
 
-      {/* Main Section */}
-      <div className="flex items-start gap-12 mb-16">
-        {/* Left Images */}
-        <div className="grid grid-cols-2 gap-4 w-1/2">
-          <img
-            src={training}
-            alt="Training"
-            className="rounded-md w-full h-40 object-cover"
-          />
-          <img
-            src={internship}
-            alt="Internship"
-            className="rounded-md w-full h-40 object-cover"
-          />
-          <img
-            src={freelance}
-            alt="Freelance"
-            className="rounded-md w-full h-40 object-cover"
-          />
-          <img
-            src={handshake}
-            alt="Handshake"
-            className="rounded-md w-full h-40 object-cover"
-          />
+          {/* Images Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src={training}
+              alt="Training"
+              className="rounded-lg w-full h-40 object-cover"
+            />
+            <img
+              src={internship}
+              alt="Internship"
+              className="rounded-lg w-full h-40 object-cover"
+            />
+            <img
+              src={freelance}
+              alt="Freelance"
+              className="rounded-lg w-full h-40 object-cover"
+            />
+            <img
+              src={handshake}
+              alt="Handshake"
+              className="rounded-lg w-full h-40 object-cover"
+            />
+          </div>
         </div>
 
-        {/* Right Text - aligned top */}
-        <div className="w-1/2 text-gray-800 leading-relaxed self-start">
-          <p className="mb-4">
+        {/* RIGHT SIDE — Text Content aligned top with heading */}
+        <div className="text-gray-800 leading-relaxed">
+          <p className="mb-5">
             <strong>Pixla Academy</strong> is India’s largest skill training and
-            placement company, dedicated to transforming students into
-            job-ready professionals. Our programs combine cutting-edge training,
+            placement company, dedicated to transforming students into job-ready
+            professionals. Our programs combine cutting-edge training,
             real-world projects, internships, and direct job deployment
             assistance to ensure every learner achieves career success.
           </p>

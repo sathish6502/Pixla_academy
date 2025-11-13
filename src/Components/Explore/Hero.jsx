@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[800px] overflow-hidden">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -50,22 +50,22 @@ const HeroSection = () => {
       ))}
 
       {/* ✅ Content — control top/bottom space manually */}
-      <div className="relative z-20 flex flex-col items-center text-center text-white px-6 md:px-20 pt-[180px] pb-[120px] ">
+      <div className="relative z-20 flex flex-col items-center text-center text-white px-6 md:px-20 pt-[210px] pb-[120px] ">
         {/* 👆 Increase/decrease pt / pb to adjust top & bottom spacing */}
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-5xl mb-6 drop-shadow-md">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight max-w-3xl mb-6 drop-shadow-md">
           {slides[current].title}
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl font-light max-w-3xl opacity-90 mb-10">
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold max-w-2xl opacity-90 mb-10">
           {slides[current].subtitle}
         </p>
 
-        <button className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300 mb-10">
+        <button className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300 mb-10">
           Explore Program <ArrowRight size={20} />
         </button>
 
-        <div className="flex flex-wrap justify-center gap-4 ">
+        <div className="flex flex-wrap justify-center gap-4 mt-30">
           {["500+ Students", "100+ Internships", "5 Campuses"].map((stat, i) => (
             <div
               key={i}
