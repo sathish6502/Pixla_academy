@@ -42,7 +42,7 @@ const HeroSection = () => {
         >
           <img
             src={slide.image}
-            alt="Hero Background"
+            alt={`Hero ${slide.id}`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
