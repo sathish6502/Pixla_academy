@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col md:flex-row ml-[420px] gap-4 md:gap-15 justify-center md:justify-start items-center md:items-start">
+        <div className="flex flex-col md:flex-row ml-[350px] gap-4 md:gap-15 justify-center md:justify-start items-center md:items-start">
           <a href="#" className="hover:text-yellow-400 transition-colors">Home</a>
           <a href="#" className="hover:text-yellow-400 transition-colors">Programs</a>
           <a href="#" className="hover:text-yellow-400 transition-colors">College</a>

@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[800px] overflow-hidden">
+    <section className="relative w-full h-[700px] sm:h-[600px] overflow-hidden">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -49,27 +49,29 @@ const HeroSection = () => {
         </div>
       ))}
 
-      {/* ✅ Content — control top/bottom space manually */}
-      <div className="relative z-20 flex flex-col items-center text-center text-white px-6 md:px-20 pt-[210px] pb-[120px] ">
-        {/* 👆 Increase/decrease pt / pb to adjust top & bottom spacing */}
-
-        <h1 className="text-4xl sm:text-4xl md:text-4xl font-semibold leading-tight max-w-3xl mb-6 drop-shadow-md">
+      {/* ✅ Content */}
+      <div className="relative z-20 flex flex-col items-center text-center text-white px-4 sm:px-6 md:px-20 pt-[150px] sm:pt-[180px] md:pt-[210px] pb-[80px] sm:pb-[100px] md:pb-[120px]">
+        {/* Title */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug sm:leading-tight max-w-[90%] sm:max-w-3xl mb-6 sm:mb-8 drop-shadow-md">
           {slides[current].title}
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl font-semibold max-w-2xl opacity-90 mb-10">
+        {/* Subtitle */}
+        <p className="text-base sm:text-lg md:text-xl font-medium sm:font-bold max-w-[90%] sm:max-w-2xl opacity-90 mb-8 sm:mb-12">
           {slides[current].subtitle}
         </p>
 
-        <button className="bg-yellow-500 text-black font-semibold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300 mb-10">
-          Explore Program <ArrowRight size={20} />
+        {/* Button */}
+        <button className="bg-yellow-500 text-black font-semibold px-4 sm:px-4 py-2 sm:py-2 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition-all duration-300 mb-10 sm:mb-16 text-sm sm:text-base">
+          Explore Program <ArrowRight size={18} className="sm:w-5 sm:h-5" />
         </button>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-30">
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-4">
           {["500+ Students", "100+ Internships", "5 Campuses"].map((stat, i) => (
             <div
               key={i}
-              className="bg-white/90 backdrop-blur-md text-black px-6 py-2 rounded-full text-base md:text-lg font-semibold shadow-sm"
+              className="bg-white/90 backdrop-blur-md text-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-semibold shadow-sm"
             >
               {stat}
             </div>
@@ -78,12 +80,12 @@ const HeroSection = () => {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full transition-all duration-300 ${
               current === index ? "bg-yellow-400 scale-110" : "bg-white/70"
             }`}
           ></button>

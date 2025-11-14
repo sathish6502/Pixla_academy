@@ -8,18 +8,26 @@ import Global from "./Components/Explore/Global.jsx"
 import College from "./Components/Explore/College.jsx"
 import Location from "./Components/Explore/Location.jsx"
 import Journey from "./Components/Explore/Journey.jsx"
+import Journeypix from "./Components/Explore/Journeypix.jsx"
+import Contact from "./Components/Explore/Contact.jsx"
+import Testimonial from "./Components/Explore/Testimonial.jsx"
+import Pro from "./Components/Explore/Pro.jsx"
 
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Hero />
+      <Hero /> 
       <Global />
       <College />
       <Location />
+      <Journeypix />
+      <Pro />
       <Journey />
-      <Blogs />
+      <Testimonial />
+      <Contact />
+      <Blogs /> 
       <Join />
       <Footer />
     
